@@ -77,9 +77,12 @@ head(CoSIA::viewCoSIAn(CoSIAn_Obj_Vignette_diversity_specificity_convert, "conve
 
 note: \# metric_type = "DF_Tissue"
 
-```{r diversity-specificity-human-rat-tissue,  dpi=200, fig.height=13, fig.width=6 }
+Example figure from vignette that the following code segment is creating
+<img src="../inst/images/CoSIA_DS_Gene_example.png" alt="Figure. Diversity vs Specificity of Genes in Geneset Across Anatomical Entity Names" width="703"/
+
+```{r diversity-specificity-human-rat-tissue,  dpi=200 }
 CoSIA_Vignette_expression_human_rat_tissue <- CoSIA::getGExMetrics(CoSIAn_Obj_Vignette_diversity_specificity_convert)
-CoSIA_Vignette_diversity_specificity_tissue_plot <- CoSIA::plotCVGEx(CoSIA_Vignette_expression_human_rat_tissue)
+CoSIA_Vignette_diversity_specificity_tissue_plot <- CoSIA::plotDSGEx(CoSIA_Vignette_expression_human_rat_tissue)
 CoSIA_Vignette_diversity_specificity_tissue_plot
 
 end_time <- Sys.time()

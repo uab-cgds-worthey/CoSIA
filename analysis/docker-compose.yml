@@ -1,0 +1,12 @@
+services:
+ rstudio_cosia:
+    build:
+      context: .
+      target: rstudio_stage
+      dockerfile: Dockerfile
+    volumes:
+      - ../.:/home/rstudio
+    ports:
+      - 8787:8787
+    tty: true
+    stdin_open: true

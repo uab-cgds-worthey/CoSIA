@@ -54,6 +54,9 @@ CoSIA_Instance <- R6Class("CoSIA_Instance",
     calculate_expression_metrics = function() {
       self$expression_metrics <- CoSIA::getGExMetrics(self$conversion)
     },
+    calculate_species_gene_expression_plot = function(tissue, gene){
+      self$gene_expression_plot <- CoSIA::plotSpeciesGEx(self$expression_metrics)
+    },
     calculate_coefficient_variation_plot = function() {
       self$coefficient_variation_plot <- CoSIA::plotCVGEx(self$expression_metrics)
     },
